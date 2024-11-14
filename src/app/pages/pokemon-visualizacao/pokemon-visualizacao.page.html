@@ -1,0 +1,39 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pokedex" routerDirection="backward"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pokemon {{ pokemonview.name | textFormatting}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+ 
+
+    <ion-card >
+      <div style="text-align: center; margin: 25px;">
+        <img *ngIf="!this.gen" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/{{pokemonId}}.svg" height="300px" width="300px">
+        <img *ngIf="this.gen" [src]="'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + pokemonId + '.png'" alt="{{ pokemonId }}">
+      </div>
+      <ion-card-header>
+        <ion-card-subtitle>
+          <ion-badge color="dark" *ngFor="let type of pokemonview.types" style="margin-right: 2px;"  [ngClass]="'badge-' + type.type.name.toLowerCase()">{{ type.type.name }}</ion-badge>
+        </ion-card-subtitle>
+        <ion-card-title> {{ pokemonview.name | uppercase }}</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngFor="let stat of pokemonview.stats">
+            {{ stat.stat.name | textFormatting}} <span slot="end">{{ stat.base_stat }}</span>
+          </ion-item>
+        </ion-list>
+  
+        <div style="margin-top: .625rem;">
+          <ion-button expand="block" (click)="capturar()">
+            <ion-icon name="camera" slot="start"></ion-icon> &nbsp;
+            Capturar Pokemon</ion-button>
+        </div>
+      </ion-card-content>
+    </ion-card>
+
+</ion-content>

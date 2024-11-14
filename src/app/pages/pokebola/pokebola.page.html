@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/pokedex-visualizacao" routerDirection="backward"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pokebola - Capturar</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" style="--background: transparent !important;">
+ 
+  <div class="pokemon" *ngIf="!captured">
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemonId }}.png">
+  </div>
+
+  <div class="bottom-button">
+    <ion-button id="button" expand="block" (click)="capturar()">Vai Pokebola</ion-button>
+  </div>
+</ion-content>

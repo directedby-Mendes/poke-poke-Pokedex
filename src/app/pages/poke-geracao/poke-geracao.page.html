@@ -1,0 +1,22 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home" routerDirection="backward"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Escolha sua Geração</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-list style="width: 95%;" *ngFor="let number of numbers">
+    <ion-item lines="none">
+    <ion-card (click)="generationEnter(number)">
+      <ion-card-content>
+        <img src="assets\img\ball{{number}}.png" width="100px">
+        <h2>Pokemons de Geração {{number}}</h2>
+      </ion-card-content>
+    </ion-card>
+    </ion-item>
+    </ion-list>
+</ion-content>
