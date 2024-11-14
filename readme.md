@@ -35,3 +35,21 @@ npm install
 ```javascript
 ionic serve
 ```
+
+
+A aplicação estará disponível em http://localhost:8100.
+
+Estrutura do Projeto
+* src/app: Contém os componentes principais da aplicação.
+* src/assets: Inclui imagens e outros arquivos estáticos.
+* src/services: Serviços para fazer requisições e manipular dados.
+Problemas Conhecidos
+
+ *Alternância de Gerações: Atualmente, há uma dificuldade na atualização correta das listas de Pokémon ao alternar entre as gerações.
+ 
+Contribuição
+
+Contribuições são bem-vindas! Se você tiver sugestões ou melhorias, fique à vontade para abrir uma issue ou enviar um pull request.
+
+Licença
+Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
