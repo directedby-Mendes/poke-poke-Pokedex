@@ -20,14 +20,18 @@ Clone o repositório:
 
 ```javascript
 git clone https://github.com/seu-usuario/pokedex.git
+```
+
 
 2. Instale as dependências:
 
 ```javascript
 cd pokedex
 npm install
+```
 
 3. Execute o aplicativo:
 
 ```javascript
 ionic serve
+```
