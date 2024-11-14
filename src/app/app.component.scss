@@ -117,3 +117,6 @@ ion-note {
 ion-item.selected {
   --color: var(--ion-color-primary);
 }
+ion-menu::part(container){
+  border-radius: 0 3rem 3rem 0;
+}
